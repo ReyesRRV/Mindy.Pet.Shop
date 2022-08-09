@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+.navfondo{
+    opacity: 80%;
+    width: 100%;
+    height: 8vh;
+    position: fixed !important;
+    top: 0%;
+    background-color: rgb(245, 209, 186);
+}
+header{
+    background-image:url(https://media.discordapp.net/attachments/993508372357853215/1006674005249490984/bowl-and-pet-daities-on-green-background_1_2.png?width=1440&height=575);
+    background-position: 10%;
+    background-size:cover;
+    height: 100vh;
+}
+main{
+    height: 100vh;
+}
+h1{
+    display: flex;
+    text-align: center;
+    align-items: center !important;
+}
