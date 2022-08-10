@@ -6,70 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link rel="stylesheet" href="./css/style.css">
-
-
     <link rel="shortcut icon" href="./asset/img/pawprint_1.png" type="image/x-icon">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
 <body>
 
+    <nav class="navbar navbar-expand-lg navfondo ">
+
+        <input type="checkbox" id="burger-toggle">
+        <label for="burger-toggle" class="burger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+        <div class="menu">
+            <div class="menu-inner">
+                <ul class="menu-nav">
+                    <li class="menu-nav-item"><a class="menu-nav-link" href="./index.html"><span>
+                                <div>Inicio</div>
+                            </span></a></li>
+                    <li class="menu-nav-item"><a class="menu-nav-link" href="./contacts.html"><span>
+                                <div>Contactos</div>
+                            </span></a></li>
+                    <li class="menu-nav-item"><a class="menu-nav-link" href="./juguetes.html"><span>
+                                <div>Juguetes</div>
+                            </span></a></li>
+                    <li class="menu-nav-item"><a class="menu-nav-link" href="./Remedios.html"><span>
+                                <div>Remedios</div>
+                            </span></a></li>
+                </ul>
+
+
+                <div class="images">
+                    <a class="image-link" href="#">
+                        <div class="image" data-label="Perritos"><img src="./asset/img/pixlr-bg-result.png" alt="">
+                        </div>
+                    </a>
+                    <a class="image-link" href="#">
+                        <div class="image" data-label="Gatitos"><img src="./asset/img/pixlr-bg-result (4).png" alt="">
+                        </div>
+                    </a>
+                    <a class="image-link" href="#">
+                        <div class="image" data-label="Aves"><img src="./asset/img/pixlr-bg-result (2).png" alt="">
+                        </div>
+                    </a>
+                    <a class="image-link" href="#">
+                        <div class="image" data-label="Roedores"><img src="./asset/img/pixlr-bg-result (3).png" alt="">
+                        </div>
+                    </a>
+                </div>
+
+                </header>
+    </nav>
+    <header class="d-flex justify-content-end textoprincipal">
+        <div class="d-flex justify-content-center align-items-center">
+            <span class="h1 textNewsletter">!Bienvenidos a la Tienda de <span class="Mindy"> Mindy!</span></span>
+        </div>
+    </header>
+
     <main>
         <!-- carrito -->
         <div class="container">
-            <div class="item-container">
-                <div class="cart-tittle-container">
-                    <h5>Carrito(1)</h5>
-                </div>
+            <div class="table-responsive item-container">
+
                 <table class="table">
                     <thead>
                         <tr>
+                            <h4>Carrito(cantidad de productos)</h4>
+                        </tr>
+                        <tr>
                             <th>Producto</th>
                             <th>Precio</th>
-                            <th>Cantidad</th>
                             <th>Subtotal</th>
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="item-name">
-                                    <div class="item-image">
-                                        <img src="./asset/img/D_NQ_NP_675358-MLA46180781012_052021-O.png" style="width: 48px; height: 48px; object-fit: cover;">
-                                    </div>
-                                    <p>Apple AirPods Pro - Blanco</p>
-                                </div>
-                            </td>
-                            <td>$100</td>
-                            <td>
-                                <input type="number" class="form-control" value="1">
-                            </td>
-                            <td>$100</td>
-                            <td>
-                                <button class="btn btn-danger">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-name">
-                                    <div class="item-image">
-                                        <img src="asset/img/D_NQ_NP_797363-MLA46806997274_072021-O.jpg" style="width: 48px; height: 48px; object-fit: cover;">
-                                    </div>
-                                    <p>Mouse Pad gamer CDTek Bigg 30cm x 90cm x 3mm negro/rojo</p>
-                                </div>
-                            </td>
-                            <td>$100</td>
-                            <td>
-                                <input type="number" class="form-control" value="1">
-                            </td>
-                            <td>$100</td>
-                            <td>
-                                <button class="btn btn-danger">Eliminar</button>
-                            </td>
-                        </tr>
+                    <tbody id="cartTable">
+                        <!-- se agrega tr por cada producto agregado al carrito -->
                     </tbody>
                 </table>
             </div>
@@ -129,6 +144,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+    <script src="./js/carrito.js"></script>
 </body>
 
 </html>
