@@ -6,10 +6,8 @@ const datosApi = async() => {
         juguetes = arrayApi.response.filter(e => e.tipo == "Juguete")
         console.log(juguetes)
         cardGenerator(juguetes)
-        let arrayCarrito = [];
         let botonComprar = document.querySelectorAll("button");
         botonComprar.forEach((boton) => boton.addEventListener("click", pushCarrito))
-        pushCarrito(boton)
     }catch(err){
         console.log(err)
     }
@@ -17,7 +15,7 @@ const datosApi = async() => {
 datosApi()
 
 //CARDS
-let cardsCont = document.getElementById("cont_juguetes");
+let cardsCont = document.getElementById("cont_juguetes")
 function cardGenerator(array){
    cardsCont.innerHTML = ''
     array.forEach(art=>{
@@ -28,13 +26,12 @@ function cardGenerator(array){
         <div class="card-info">
             <p class="text-title">${art.nombre}</p>
             <p class="text-body">${art.descripcion}</p>
-            <p class="text-body">Stock: ${art.stock}</p>
         </div>
         <div class="card-footer">
+            <span class="text-title">Stock: ${art.stock}</span>
             <span class="text-title">$${art.precio}</span>
-            <span class="text-title">$${card.precio}</span>
-            <button class="card-button" id="${card._id}">
-                <img  src="" style="width: 1.5rem; alt="boton comprar" id="${card._id}">
+            <button class="card-button" id="${art._id}">
+                <img src="./asset/img/pngwing.com.png" style="width: 1.5rem; alt="boton comprar" id="${art._id}">
             </button>
         </div>`
         cardsCont.appendChild(card)
@@ -42,13 +39,14 @@ function cardGenerator(array){
 }
 
 function pushCarrito(boton) {
-  let clicked = boton.target.id;
-  let item = juguetes.find((e) => e._id == clicked);
-  console.log(item)
-  if(item.stock > 0){
-    item.stock = -- item.stock
-      console.log("Si")
-      arrayCarrito.push(item)
+    let arrayCarrito = []
+    let clicked = boton.target.id
+    let item = juguetes.find((e) => e._id == clicked)
+    console.log(item)
+    if(item.stock > 0){
+        item.stock = -- item.stock
+        console.log("Si")
+        arrayCarrito.push(item)
     }else {
         console.log("No")
         alert("Agotado el producto")
