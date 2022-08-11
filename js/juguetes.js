@@ -25,7 +25,28 @@ function cardGenerator(array){
         <img class="card-img" id="foto" src="${art.imagen}" alt="Imagen de ${art.nombre}">
         <div class="card-info">
             <p class="text-title">${art.nombre}</p>
-            <p class="text-body">${art.descripcion}</p>
+            <div class="w3-container">
+            <button onclick="document.getElementById('${art._id}').style.display='block'" class="w3-button w3-2021-mint mt-1 mb-2">Ver más</button>
+
+            <div id="${art._id}" class="w3-modal">
+              <div class="w3-modal-content w3-animate-zoom w3-card-4">
+                <div class="w3-container w3-teal w3-2021-marigold">
+                  <span onclick="document.getElementById('${art._id}').style.display='none'" 
+                  class="w3-button w3-display-topright">&times;</span>
+                  <h2>${art.nombre}</h2>
+                </div>
+                <div class="w3-container">
+                  <p class="w3-sans-serif ps-2">${art.descripcion}</p>
+                </div>
+                <div class="w3-container w3-teal w3-2021-marigold">
+                  <p class="d-flex g-5">Stock: ${art.stock}</p>
+                  
+                  
+                </div>
+              </div>
+            </div>
+            </div>
+            
         </div>
         <div class="card-footer">
             <span class="text-title">Stock: ${art.stock}</span>
@@ -53,3 +74,4 @@ function pushCarrito(boton) {
     }
     console.log(arrayCarrito)
 }
+//<p class="text-body">${art.descripcion}</p>
