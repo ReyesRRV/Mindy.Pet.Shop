@@ -757,22 +757,19 @@ p {
 .menu .images img {
   display: flex;
   justify-content: center;
-  height: 22rem;
+  height: 15rem;
   transform: translateY(102%);
 }
 
 .mainarticle {
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  width: 60%;
-  height: 70vh;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
   background-color: #e1d3bf;
-  border-right: 2px dotted rgb(0, 0, 0);
 }
 
-aside {
+/* aside {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -784,11 +781,6 @@ aside {
 .mainprincipal {
   display: flex;
   flex-wrap: wrap;
-}
-
-.container-about {
-  margin: 60px;
-  font-family: Arial, Helvetica, sans-serif !important;
 }
 
 .container-about>p {
@@ -848,7 +840,7 @@ aside {
   padding: 10px;
   height: 20% !important;
   width: 100% !important;
-}
+} */
 
 /* Joaquin - Carrito */
 .container {
@@ -948,3 +940,55 @@ button:active .icon svg {
 /*button Delete from cart From uiverse.io */
 
 /* final carrito Joaquin */
+.container-about {
+  margin: 60px;
+  font-family: Arial, Helvetica, sans-serif !important;
+} 
+/**/
+/* From uiverse.io by @joe-watson-sbf */
+.cardcalecita {
+  width: 80%;
+  height: 80vh;
+  border-radius: 4px;
+  background: #a2d8af7d;
+  display: flex;
+  gap: 5px;
+  padding: .4em;
+}
+
+.cardcalecita p {
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all .5s;
+  border: 1px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardcalecita p:hover {
+  flex: 4;
+}
+
+.cardcalecita p span {
+  text-align: center;
+  transform: scale(3);
+  transition: all .5s;
+  text-transform: uppercase;
+  color: #ff568e;
+  letter-spacing: .1em;
+}
+
+.cardcalecita p:hover span {
+  transform: rotate(0);
+}
+.imagenescalecita{
+  object-fit: contain !important;
+  width: 100% !important;
+  height: 100vh !important;
+  border-radius: .5rem;
+  transition: .3s ease;
+
+}
