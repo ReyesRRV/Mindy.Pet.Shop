@@ -47,34 +47,14 @@ const pushArray = (data) => {
 
     let item = remedios.find((e) => e._id == clicked);
     // console.log(item)
+       
+    
     if (item.stock > 0) {
       item.stock = --item.stock;
       // console.log("Si")
-      arrayCarrito.push(item._id);
+      arrayCarrito.push(item);
       localStorage.setItem("id", JSON.stringify(arrayCarrito));
       console.log(localStorage);
-
-
-
-// let change = item.stock = --item.stock
-
-
-
-
-//       let ID = document.querySelectorAll(".stockID")
-//       console.log(ID)
-//       ID.innerText = '${change}'
-
-
-
-
-
-
-
-
-
-
-
 
     } else {
       console.log("No");
