@@ -12,7 +12,7 @@ const pushArray = (data) => {
   function mostrarCartas(array) {
     cards = "";
     array.forEach((card) => {
-      cards += `<div class="card">>
+      cards += `<div class="card">
                 <img src="${card.imagen}" class="card-img imagenes" alt="${card.nombre}">
             <div class="card-info">
             <p class="text-title">${card.nombre}</p>
@@ -23,7 +23,7 @@ const pushArray = (data) => {
             <span class="text-title">Stock: ${card.stock}</span>
             </div>
             <span class="text-title">$${card.precio}</span>
-            <button class="card-button" >
+            <button class="card-button botonComprar" >
             <img  src="./asset/img/pngwing.com.png" style="width: 1.5rem; alt="boton comprar" id="${card._id}">
             </button>
             </div>
@@ -38,7 +38,7 @@ const pushArray = (data) => {
   
 
 //////// ----------- LEER BOTÓN AGREGAR AL CARRITO ---------- /////////
-  let botonComprar = document.querySelectorAll("button");
+  let botonComprar = document.querySelectorAll(".botonComprar");
   // console.log(botonComprar);
   botonComprar.forEach((boton) => boton.addEventListener("click", pushCarrito));
 
