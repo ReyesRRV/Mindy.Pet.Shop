@@ -8,6 +8,8 @@ const datosApi = async() => {
         cardGenerator(juguetes)
         let botonComprar = document.querySelectorAll("button");
         botonComprar.forEach((boton) => boton.addEventListener("click", pushCarrito))
+        cargarCarrito()
+        carritoNumero()
     }catch(err){
         console.log(err)
     }
@@ -56,19 +58,29 @@ function cardGenerator(array){
         cardsCont.appendChild(card)
     });
 }
-
 function pushCarrito(boton) {
-    let arrayCarrito = []
-    let clicked = boton.target.id
-    let item = juguetes.find((e) => e._id == clicked)
-    console.log(item)
-    if(item.stock > 0){
-        item.stock = -- item.stock
-        console.log("Si")
-        arrayCarrito.push(item)
-    }else {
-        console.log("No")
-        alert("Agotado el producto")
+    let clicked = boton.target.id;
+    let item = juguetes.find((e) => e._id == clicked);
+    if (item.stock > 0) {
+      item.stock = --item.stock;
+      arrayCarrito.push(item);
+      localStorage.setItem("id", JSON.stringify(arrayCarrito));
+      console.log(localStorage);
+      carritoNumero()
+    } else {
+      console.log("No");
+      alert("Agotado el producto");
     }
-    console.log(arrayCarrito)
+}
+function cargarCarrito() {
+  // ¿Existe un carrito previo guardado en LocalStorage?
+  if (localStorage.getItem("id") !== null) {
+    // Carga la información
+    arrayCarrito = JSON.parse(localStorage.getItem("id"));
+    console.log(arrayCarrito);
+  }
+}
+function carritoNumero() {
+  document.getElementById("botoncarrito").innerText = arrayCarrito.length
+  console.log(arrayCarrito.length)
 }
