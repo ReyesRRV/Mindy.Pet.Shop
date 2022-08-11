@@ -40,8 +40,6 @@ function cardGenerator(array){
                 </div>
                 <div class="w3-container w3-teal w3-2021-marigold">
                   <p class="d-flex g-5">Stock: ${art.stock}</p>
-                  
-                  
                 </div>
               </div>
             </div>
