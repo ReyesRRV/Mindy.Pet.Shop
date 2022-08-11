@@ -40,7 +40,7 @@ const pushArray = (data) => {
           <div class="card-footer">
               <button onclick="document.getElementById('${art.nombre}').style.display='block'" class="w3-button w3-2021-mint mt-1 mb-2">Ver más</button>
               <span class="text-title">$${art.precio}</span>
-              <button class="card-button">
+              <button class="card-button botonComprar">
                   <img src="./asset/img/pngwing.com.png" style="width: 1.5rem; alt="boton comprar" id="${art._id}">
               </button>
           </div>
