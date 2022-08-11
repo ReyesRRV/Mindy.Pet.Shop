@@ -34,7 +34,7 @@ function cardGenerator(array){
             <span class="text-title">$${art.precio}</span>
             <span class="text-title">$${card.precio}</span>
             <button class="card-button" id="${card._id}">
-                <img  src="./asset/img/pngwing.com.png" style="width: 1.5rem; alt="boton comprar" id="${card._id}">
+                <img  src="" style="width: 1.5rem; alt="boton comprar" id="${card._id}">
             </button>
         </div>`
         cardsCont.appendChild(card)
@@ -43,7 +43,7 @@ function cardGenerator(array){
 
 function pushCarrito(boton) {
   let clicked = boton.target.id;
-  let item =  remedios.find((e) => e._id == clicked);
+  let item = juguetes.find((e) => e._id == clicked);
   console.log(item)
   if(item.stock > 0){
     item.stock = -- item.stock
