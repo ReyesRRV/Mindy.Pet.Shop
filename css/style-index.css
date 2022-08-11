@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body,
+html {
+    width: 100%;
+    font-size: 10px;
+    color: var(--text-color);
+    font-weight: normal;
+    font-family: sans-serif;
+    background-color: var(--home-bg-color);
+}
+
+header {
+    background-image: url(https://media.discordapp.net/attachments/993508372357853215/1006674005249490984/bowl-and-pet-daities-on-green-background_1_2.png?width=1440&height=575);
+    background-position: 10%;
+    background-size: cover;
+    height: 100vh;
+}
+
+.h1 {
+    margin-right: 200px;
+    display: flex;
+    text-align: center;
+    text-shadow: 0px 0px 4px rgba(255, 234, 0, 0.317);
+}
+
+.Mindy {
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    font-size: 4rem;
+}
+
+p {
+    display: inline;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    word-spacing: 0.5em;
+    letter-spacing: 0.1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    font-size: 1.6rem;
+    line-height: 1.5em;
+    word-spacing: 0.5em;
+    letter-spacing: 0.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline;
+    font-weight: bold;
+    padding: 7px;
+    color: var(--icon-hover-bg);
+}
+
+.card-img:hover {
+    transform: translateY(-25%);
+    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+}
+
+.card-button:hover {
+    border: 1px solid #ffcaa6;
+    background-color: #ffcaa6;
+}
+
+.navfondo {
+    opacity: 80%;
+    width: 100%;
+    height: 8vh;
+    position: fixed !important;
+    top: 0%;
+    background-color: rgb(245, 209, 186);
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+p {
+    margin: 0;
+}
+
+#burger-toggle {
+    position: absolute;
+    appearance: none;
+    opacity: 0;
+}
+
+#burger-toggle:checked~.menu {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+#burger-toggle:checked~.menu .menu-nav-link span div,
+#burger-toggle:checked~.menu img,
+#burger-toggle:checked~.menu .title p {
+    transform: translateY(0);
+    transition: 1.2s 0.1s cubic-bezier(0.35, 0, 0.07, 1);
+
+}
+
+#burger-toggle:checked~.menu .image-link:nth-child(1) img {
+    transition-delay: 0.18s;
+}
+
+#burger-toggle:checked~.menu .image-link:nth-child(2) img {
+    transition-delay: 0.26s;
+}
+
+#burger-toggle:checked~.menu .image-link:nth-child(3) img {
+    transition-delay: 0.34s;
+}
+
+#burger-toggle:checked~.menu .image-link:nth-child(4) img {
+    transition-delay: 0.42s;
+}
+
+#burger-toggle:checked~.burger-menu .line::after {
+    transform: translateX(0);
+}
+
+#burger-toggle:checked~.burger-menu .line:nth-child(1) {
+    transform: translateY(calc(var(--burger-menu-radius) / 5)) rotate(45deg);
+}
+
+#burger-toggle:checked~.burger-menu .line:nth-child(2) {
+    transform: scaleX(0);
+}
+
+#burger-toggle:checked~.burger-menu .line:nth-child(3) {
+    transform: translateY(calc(var(--burger-menu-radius) / -5)) rotate(-45deg);
+}
+
+.burger-menu {
+    --burger-menu-radius: 4em;
+    position: fixed;
+    top: 1vh;
+    left: 5vw;
+    z-index: 100;
+    display: block;
+    width: var(--burger-menu-radius);
+    height: var(--burger-menu-radius);
+    outline: none;
+    cursor: pointer;
+}
+
+.burger-menu .line {
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background: rgba(43, 61, 79, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.burger-menu .line:nth-child(1) {
+    top: 30%;
+}
+
+.burger-menu .line:nth-child(2) {
+    top: 50%;
+}
+
+.burger-menu .line:nth-child(3) {
+    top: 70%;
+}
+
+.burger-menu .line::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transform: translateX(-100%);
+    transition: 0.25s;
+}
+
+.burger-menu .line:nth-child(2)::after {
+    transition-delay: 0.1s;
+}
+
+.burger-menu .line:nth-child(3)::after {
+    transition-delay: 0.2s;
+}
+
+.burger-menu:hover .line::after {
+    transform: translateX(0);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1e23;
+    opacity: 1;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: 0.3s;
+
+}
+
+@media screen and (max-width: 750px) {
+    .menu {
+        display: block;
+    }
+}
+
+.menu-nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+
+}
+
+@media screen and (max-width: 750px) {
+    .menu-nav {
+        flex-direction: column;
+
+    }
+}
+
+.menu-nav-item {
+    flex: 1;
+}
+
+.menu-nav-link {
+    position: relative;
+    display: inline-flex;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: white;
+    text-decoration: none;
+
+}
+
+.menu-nav-link span {
+    overflow: hidden;
+
+}
+
+.menu-nav-link span div {
+    transform: translateY(102%);
+}
+
+.menu-nav-link::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+
+}
+
+.menu-nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.menu .gallery {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.menu .title {
+    font-size: 24px;
+    color: white;
+    overflow: hidden;
+}
+
+.menu .title p {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transform: translateY(102%);
+}
+
+.menu .images {
+    margin-top: 36px;
+    margin-left: 95px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 750px) {
+    .menu .images {
+        display: none;
+    }
+}
+
+.menu .images .image-link {
+    width: 15vw;
+    margin: 0 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+@media screen and (max-width: 750px) {
+    .menu .images .image-link {
+        width: 40vw;
+        margin: 0 12px 12px 0;
+    }
+}
+
+.menu .images .image-link .image {
+
+    transition: 0.6s;
+}
+
+.menu .images .image-link .image::before {
+    position: absolute;
+    content: attr(data-label);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: 0.4s;
+
+}
+
+.menu .images .image-link:hover .image {
+    transform: scale(1.2);
+}
+
+.menu .images .image-link:hover .image::before {
+    opacity: 1;
+}
+
+.menu .images img {
+    display: flex;
+    justify-content: center;
+    height: 15rem;
+    transform: translateY(102%);
+}
+
+
+
+
+
+
+
+/*APARTIR DE ACA ES EL BODY DEL INDEX, ESTO LO CAMBIAN POR LO QUE VAYA EN SU PROPIO HTML*/
+.cardcalecita {
+    width: 80%;
+    height: 80vh;
+    border-radius: 4px;
+    background: #a2d8af7d;
+    display: flex;
+    gap: 5px;
+    padding: .4em;
+}
+
+.cardcalecita p {
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all .5s;
+    border: 1px solid #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardcalecita p:hover {
+    flex: 4;
+}
+
+.cardcalecita p span {
+    text-align: center;
+    transform: scale(3);
+    transition: all .5s;
+    text-transform: uppercase;
+    color: #ff568e;
+    letter-spacing: .1em;
+}
+
+.cardcalecita p:hover span {
+    transform: rotate(0);
+}
+
+.imagenescalecita {
+    object-fit: contain !important;
+    width: 100% !important;
+    height: 100vh !important;
+    border-radius: .5rem;
+    transition: .5s ease;
+
+}
+
+.cardcalecita {
+    width: 100%;
+    height: 80vh;
+    border-radius: 4px;
+    background: #a2d8af7d;
+    display: flex;
+    gap: 5px;
+    padding: .4em;
+}
+
+.cardcalecita p {
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all .5s;
+    border: 1px solid #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardcalecita p:hover {
+    flex: 4;
+}
+
+.cardcalecita p span {
+    text-align: center;
+    transform: scale(3);
+    transition: all .5s;
+    text-transform: uppercase;
+    color: #ff568e;
+    letter-spacing: .1em;
+}
+
+.cardcalecita p:hover span {
+    transform: rotate(0);
+}
+
+.imagenescalecita {
+    object-fit: contain !important;
+    width: 100% !important;
+    height: 100vh !important;
+    border-radius: .5rem;
+    transition: .9s ease;
+
+}
+
+@media (max-width:1024px) {
+    .cardcalecita {
+        min-width: 100%;
+        height: 80vh;
+        border-radius: 4px;
+        background: #a2d8af7d;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: .4em;
+    }
+
+    header {
+        background-image: url(https://media.discordapp.net/attachments/993508372357853215/1006674005249490984/bowl-and-pet-daities-on-green-background_1_2.png?width=1440&height=575);
+        background-position: 10%;
+        background-size: cover;
+        height: 60vh;
+    }
+    .h1 {
+        display: none;
+    }
+    
+    .Mindy {
+        display: none;
+    }
+    .textocelu{
+        display: flex;
+        margin-top: 600px;
+        background-color: antiquewhite;
+    }
+
+}
