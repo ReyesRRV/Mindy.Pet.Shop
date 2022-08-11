@@ -273,7 +273,6 @@ footer{
     color: var(--icon-hover-bg);
   }
   a::after {
-    content: "\e806";
     display: inline-block;
     font-family: fontello;
     padding: 5px;
