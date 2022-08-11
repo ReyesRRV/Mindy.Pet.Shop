@@ -11,29 +11,47 @@ const pushArray = (data) => {
   let remedios = [...data.response.filter((e) => e.tipo == "Medicamento")];
   function mostrarCartas(array) {
     cards = "";
-    array.forEach((card) => {
-      cards += `<div class="card">
-                <img src="${card.imagen}" class="card-img imagenes" alt="${card.nombre}">
-            <div class="card-info">
-            <p class="text-title">${card.nombre}</p>
-            <p class="text-body">${card.descripcion}</p>
+    array.forEach(art=>{
+      let card = document.createElement ('div')
+      card.className = 'card'
+      card.innerHTML = `
+      <img class="card-img" id="foto" src="${art.imagen}" alt="Imagen de ${art.nombre}">
+      <div class="card-info">
+          <p class="text-title">${art.nombre}</p>
+          <div class="w3-container">
+          
+
+          <div id="${art.nombre}" class="w3-modal">
+            <div class="w3-modal-content w3-animate-zoom w3-card-4">
+              <div class="w3-container w3-teal w3-2021-marigold">
+                <span onclick="document.getElementById('${art.nombre}').style.display='none'" 
+                class="w3-button w3-display-topright">&times;</span>
+                <h2>${art.nombre}</h2>
+              </div>
+              <div class="w3-container">
+                <p class="w3-sans-serif ps-2 fs-3">${art.descripcion}</p>
+              </div>
+              <div class="w3-container w3-teal w3-2021-marigold">
+                <p class="d-flex g-5 fs-4">Stock: ${art.stock}</p>
+              </div>
             </div>
-            <div class="card-footer d-flex">
-            <div class="stockID">
-            <span class="text-title">Stock: ${card.stock}</span>
-            </div>
-            <span class="text-title">$${card.precio}</span>
-            <button class="card-button botonComprar" >
-            <img  src="./asset/img/pngwing.com.png" style="width: 1.5rem; alt="boton comprar" id="${card._id}">
-            </button>
-            </div>
-        </div>`;
-      remediosContainer.innerHTML = cards;
-      
-    });
-  }
+          </div>
+          </div>
+          <div class="card-footer">
+              <button onclick="document.getElementById('${art.nombre}').style.display='block'" class="w3-button w3-2021-mint mt-1 mb-2">Ver más</button>
+              <span class="text-title">$${art.precio}</span>
+              <button class="card-button">
+                  <img src="./asset/img/pngwing.com.png" style="width: 1.5rem; alt="boton comprar" id="${art._id}">
+              </button>
+          </div>
+          
+      </div>`
+      remediosContainer.appendChild(card)
+  });
+}
   mostrarCartas(remedios);
   cargarCarrito();
+carritoNumero()
 
   
 
@@ -55,6 +73,7 @@ const pushArray = (data) => {
       arrayCarrito.push(item);
       localStorage.setItem("id", JSON.stringify(arrayCarrito));
       console.log(localStorage);
+      carritoNumero()
 
     } else {
       console.log("No");
@@ -70,5 +89,9 @@ const pushArray = (data) => {
       arrayCarrito = JSON.parse(localStorage.getItem("id"));
       console.log(arrayCarrito);
     }
+  }
+  function carritoNumero() {
+    document.getElementById("botoncarrito").innerText = arrayCarrito.length
+    console.log(arrayCarrito.length)
   }
 };
