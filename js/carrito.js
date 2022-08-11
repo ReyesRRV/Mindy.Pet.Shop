@@ -35,3 +35,10 @@ function cartTableRender(productsArray) {
         cartTable.appendChild(tr);
     });
 }
+
+function obetenerLocalStorage() {
+    if (localStorage.getItem("key") === null) {
+        console.log("El producto no existe");
+    }
+}
+obetenerLocalStorage();
