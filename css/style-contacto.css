@@ -22,7 +22,7 @@ header {
     background-image: url(https://media.discordapp.net/attachments/993508372357853215/1006674005249490984/bowl-and-pet-daities-on-green-background_1_2.png?width=1440&height=575);
     background-position: 10%;
     background-size: cover;
-    height: 100vh;
+    height: 30vh;
 }
 
 .h1 {
@@ -488,7 +488,7 @@ footer
     text-align: center;
     padding: 30px 20px;
 }
-#footer .footer-top .footer-info .footer-logo{
+#footer .footer-top .footer-info{
     width: 50vh;
     margin: 0 0 20px 0;
 }
@@ -525,6 +525,7 @@ footer
     padding-bottom: 12px;
 }
 #footer .footer-top .footer-links {
+    margin-left: 50px;
     margin-bottom: 30px;
 }
 #footer .footer-top .footer-links ul {
@@ -599,4 +600,11 @@ footer
     #footer .footer-top .footer-info {
         margin: -20px 0 30px 0;
     }
+}
+main{
+    margin-top: 40px;
+    height: 70vh;
+}
+.footer-logo{
+    width: 40vh;
 }
