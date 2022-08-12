@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <title>Remedios</title>
   <link rel="stylesheet" href="./css/style-medicamentos.css">
   <link rel="shortcut icon" href="./asset/img/pawprint_1.png" type="image/x-icon">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -15,15 +14,13 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navfondo d-flex justify-content-end">
+  <nav class="navbar navbar-expand-lg navfondo ">
     <div class="carritocompras" style="height: 4rem;">
-      <button class="botoncarrito" style="height: 80%; width: 60%;">
-        <a href="./carrito.html" class="colortextoboton"><img src="./asset/svg/basket.svg" class="imagencarrito"
-            alt="Carrito de compras"></a><span id="botoncarrito" class="textocarrito d-flex">0</span>
-      </button>
-    </div>
-
-
+        <button class="botoncarrito" style="height: 80%; width: 60%;">
+          <a href="./carrito.html" class="colortextoboton"><img src="./asset/svg/basket.svg" class="imagencarrito"
+              alt="Carrito de compras"></a><span id="botoncarrito" class="textocarrito d-flex">0</span>
+        </button>
+      </div>
 
     <input type="checkbox" id="burger-toggle">
     <label for="burger-toggle" class="burger-menu">
@@ -57,17 +54,18 @@
             <div class="image"><img src="./asset/svg/person-lines-fill.svg" alt=""></div>
           </a>
           <a class="image-link" href="#">
-            <div class="image"><img src="./asset/svg/dribbble.svg" alt=""></div>
+            <div class="image"><img src="./asset/svg/capsule.svg" alt=""></div>
           </a>
           <a class="image-link" href="#">
-            <div class="image"><img src="./asset/svg/capsule.svg" alt=""></div>
+            <div class="image"><img src="./asset/svg/dribbble.svg" alt=""></div>
           </a>
         </div>
 
   </nav>
-  <header>
-    <div class="d-flex justify-content-end align-content-center">
-      <h1>!Bienvenidos a mi Tienda!</h1>
+  <header class="d-flex">
+    <div class="d-flex justify-content-md-center align-items-center" >
+      <span class="h1 m-5"id="titulo">!Bienvenidos a la Tienda de <span class="Mindy"> Mindy!</span></span>
+      <h1 class="d-lg-none d-flex align-items-center textocelu">Bienvenidos a la Tienda de Mindy!</h1>
     </div>
   </header>
   <main class="container">
@@ -82,9 +80,61 @@
   </main>
 
 
-  <footer>
-
-  </footer>
+  <footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row" style="background-color: #F0A83E;">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-info">
+                        <img src="./asset/img/logo2.png" alt="" class="footer-logo">
+                        <p class="pb-3"><em>Brindando la mejor atención desde 2005.</em></p>
+                        <p>
+                            Rio de Janeiro 300 <br>
+                            Caballito, Buenos Aires.<br>
+                        </p>
+                        <br>
+                        <p>
+                            <strong>Tel:</strong>
+                            <a href="tel:+54 351 153 271 831"> +54 351 153 271 831</a>
+                        </p>
+                        <br>
+                        <p>
+                            <strong>Email:</strong>
+                            <a href="mailto:info@petshopmindy.com">info@petshopmindy.com</a>
+                        </p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><img src="./asset/svg/twitter.svg" alt=""></a>
+                            <a href="#" class="facebook"><img src="./asset/svg/facebook.svg" alt=""></a>
+                            <a href="#" class="instagram"><img src="./asset/svg/instagram.svg" alt=""></a>
+                            <a href="#" class="linkedin"><img src="./asset/svg/linkedin.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Links Utiles</h4>
+                    <ul>
+                        <li><a href="./Index.html">Home</a></li>
+                        <li><a href="./Remedios.html">Farmacia</a></li>
+                        <li><a href="./juguetes.html">Jueguetes</a></li>
+                        <li><a href="./contacts.html">Contacto</a></li> 
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Recibí más información</h4>
+                    <p>Quedemos en contacto!</p>
+                    <form action="" method="post">
+                    <input type="email" name="email"><input type="submit" value="Subscribirse">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="background-color: #F0A83E;">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Grupo 1</span></strong>. All Rights Reserved
+        </div>
+    </div>
+</footer>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
