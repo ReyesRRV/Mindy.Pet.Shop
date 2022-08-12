@@ -673,3 +673,25 @@ svg {
 .footer-logo{
     width: 40vh;
 }
+
+@media (max-width: 425px){
+    .footer-info{
+        max-width: 300px;
+    }
+    .footer-logo{
+        max-width: 290px;
+    }
+    #footer .footer-top .footer-links {
+        margin-left: 0px;
+        margin-bottom: 30px;
+    }
+    
+}
+
+
+@media(min-width: 990px) {
+  #footer .footer-top .footer-links{
+    margin-left: 15rem !important;
+  }
+    
+  }

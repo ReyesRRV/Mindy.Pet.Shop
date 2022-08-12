@@ -691,3 +691,11 @@ p {
     margin-top: 8px;
     margin-bottom: 8px;
 }
+
+
+/* @media(min-width: 990px) {
+  #footer .footer-top .footer-links{
+    margin-left: 15rem !important;
+  }
+    
+  } */
