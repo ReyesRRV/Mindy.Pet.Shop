@@ -14,36 +14,61 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navfondo">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="">
-                <img src="https://media.discordapp.net/attachments/993508372357853215/1006664709589712936/Logo_2.png" alt="Logo">
-            </a>
-        <div class="collapse navbar-collapse -flex justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="./index.html">Inicio</a>
-                    <a class="nav-link" href="./contacts.html">Contacto</a>
-                    <a class="nav-link active" aria-current="page" href="#">Juguetes</a>
-                    <a class="nav-link" href="./Remedios.html">Remedios</a>
-                    <a class="nav-link" href="./carrito.html">Carrito</a>
-                </div>
+    <nav class="navbar navbar-expand-lg navfondo d-flex justify-content-end">
+        <div class="carritocompras" style="height: 4rem;">
+          <button class="botoncarrito" style="height: 80%; width: 60%;">
+            <a href="./carrito.html" class="colortextoboton"><img src="./asset/svg/basket.svg" class="imagencarrito"
+                alt="Carrito de compras"></a><span id="botoncarrito" class="textocarrito d-flex">0</span>
+          </button>
         </div>
+
+        <input type="checkbox" id="burger-toggle">
+        <label for="burger-toggle" class="burger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+        <div class="menu">
+          <div class="menu-inner">
+            <ul class="menu-nav">
+            <li class="menu-nav-item"><a class="menu-nav-link" href="./index.html"><span>
+                <div>Inicio</div>
+                </span></a></li>
+            <li class="menu-nav-item"><a class="menu-nav-link" href="./contacts.html"><span>
+                <div>Contactos</div>
+                </span></a></li>
+            <li class="menu-nav-item"><a class="menu-nav-link" href="./juguetes.html"><span>
+                <div>Juguetes</div>
+                </span></a></li>
+            <li class="menu-nav-item"><a class="menu-nav-link" href="./Remedios.html"><span>
+                <div>Remedios</div>
+                </span></a></li>
+            </ul>
+            <div class="images">
+                <a class="image-link" href="#">
+                <div class="image"><img src="./asset/svg/house-heart-fill.svg" alt=""></div>
+                </a>
+                <a class="image-link" href="#">
+                <div class="image"><img src="./asset/svg/person-lines-fill.svg" alt=""></div>
+                </a>
+                <a class="image-link" href="#">
+                <div class="image"><img src="./asset/svg/dribbble.svg" alt=""></div>
+                </a>
+                <a class="image-link" href="#">
+                <div class="image"><img src="./asset/svg/capsule.svg" alt=""></div>
+                </a>
         </div>
     </nav>
     <header id="header">
         <h1 id="h1">!Bienvenidos a mi Tienda!</h1>
     </header>
     <main class="container">
-    
-        
+
         <!-- JUGUETES -->
         <div id="cont_juguetes">
 
-
         </div>
-
     </main>
-
 
 <footer>
     <footer>

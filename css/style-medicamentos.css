@@ -1,17 +1,21 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
+
 .navfondo {
-  opacity: 80%;
-  width: 100%;
-  height: 8vh;
-  position: fixed;
-  top: 0%;
-  background-color: rgb(245, 209, 186);
-  z-index: 15;
+    opacity: 80%;
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    top: 0%;
+    background-color: rgb(245, 209, 186);
+    z-index: 15;
 }
+
 #header {
     background-image: url(https://media.discordapp.net/attachments/993508372357853215/1006674005249490984/bowl-and-pet-daities-on-green-background_1_2.png?width=1440&height=575);
     background-position: 10%;
@@ -21,15 +25,18 @@
     justify-content: end;
     align-items: center;
 }
+
 #h1 {
     margin: 0 150px 80px 0;
     text-shadow: 0px 0px 4px rgba(255, 234, 0, 0.317);
 }
-main{
+
+main {
     min-height: 100vh;
     margin-top: 50px;
 }
-#cont_juguetes{
+
+#cont_juguetes {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -45,81 +52,82 @@ main{
     height: 320px;
     margin: 20px 5px;
     padding: .8em;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-   }
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
 
-   .card-img {
+.card-img {
     object-fit: contain !important;
     width: 100%;
     height: 20vh;
     border-radius: .5rem;
     transition: .3s ease;
     background-color: white;
-   }
+}
 
-   .card-info {
+.card-info {
     padding-top: 10%;
-   }
+}
 
-   svg {
+svg {
     width: 20px;
     height: 20px;
-   }
+}
 
-   .card-footer {
+.card-footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 10px;
     border-top: 1px solid #ddd;
-   }
+}
 
-   /* Text */
-   .text-title {
+/* Text */
+.text-title {
     font-weight: 900;
     font-size: 1.2em;
     line-height: 1.5;
     font-family: Arial, Helvetica, sans-serif;
-   }
+}
 
-   .text-body {
+.text-body {
     font-size: .9em;
     padding-bottom: 10px;
-   }
+}
 
-   /* Button */
-   .card-button {
+/* Button */
+.card-button {
     border: 1px solid #252525;
     display: flex;
     padding: .3em;
     cursor: pointer;
     border-radius: 50px;
     transition: .3s ease-in-out;
-   }
+}
 
-   /* Hover */
-   .card-img:hover {
-    transform: translateY(-25%);
+/* Hover */
+.card-img:hover {
+    transform: translateY(-5%);
+    transform: scale(110%);
     box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
-   }
+}
 
-   .card-button:hover {
+.card-button:hover {
     border: 1px solid #ffcaa6;
     background-color: #ffcaa6;
-   }
+}
 
-   .navfondo{
-       opacity: 80%;
-       width: 100%;
-       height: 8vh;
-       position: fixed !important;
-       top: 0%;
-       background-color: rgb(245, 209, 186);
-   }
+.navfondo {
+    opacity: 80%;
+    width: 100%;
+    height: 8vh;
+    position: fixed !important;
+    top: 0%;
+    background-color: rgb(245, 209, 186);
+}
 
 
-   .bold{
+.bold {
     font-weight: bold;
 }
 .botoncarrito{

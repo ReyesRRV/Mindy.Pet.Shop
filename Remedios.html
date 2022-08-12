@@ -2,131 +2,95 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/juguetes.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="shortcut icon" href="./asset/img/pawprint_1.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style-medicamentos.css">
+  <link rel="shortcut icon" href="./asset/img/pawprint_1.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navfondo d-flex justify-content-end  ">
+  <nav class="navbar navbar-expand-lg navfondo d-flex justify-content-end">
+    <div class="carritocompras" style="height: 4rem;">
+      <button class="botoncarrito" style="height: 80%; width: 60%;">
+        <a href="./carrito.html" class="colortextoboton"><img src="./asset/svg/basket.svg" class="imagencarrito"
+            alt="Carrito de compras"></a><span id="botoncarrito" class="textocarrito d-flex">0</span>
+      </button>
+    </div>
 
 
 
-        <div class="carritoCompras m-5">
-            <button>
+    <input type="checkbox" id="burger-toggle">
+    <label for="burger-toggle" class="burger-menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+    <div class="menu">
+      <div class="menu-inner">
+        <ul class="menu-nav">
+          <li class="menu-nav-item"><a class="menu-nav-link" href="./index.html"><span>
+                <div>Inicio</div>
+              </span></a></li>
+          <li class="menu-nav-item"><a class="menu-nav-link" href="./contacts.html"><span>
+                <div>Contactos</div>
+              </span></a></li>
+          <li class="menu-nav-item"><a class="menu-nav-link" href="./juguetes.html"><span>
+                <div>Juguetes</div>
+              </span></a></li>
+          <li class="menu-nav-item"><a class="menu-nav-link" href="./Remedios.html"><span>
+                <div>Remedios</div>
+              </span></a></li>
+        </ul>
 
-                <a href="./carrito.html"><img class="" src="./asset/img/pngwing.com.png" style="height: 3rem;" alt="Carrito de compras"></a>
-            </button>
 
+        <div class="images">
+          <a class="image-link" href="#">
+            <div class="image"><img src="./asset/svg/house-heart-fill.svg" alt=""></div>
+          </a>
+          <a class="image-link" href="#">
+            <div class="image"><img src="./asset/svg/person-lines-fill.svg" alt=""></div>
+          </a>
+          <a class="image-link" href="#">
+            <div class="image"><img src="./asset/svg/dribbble.svg" alt=""></div>
+          </a>
+          <a class="image-link" href="#">
+            <div class="image"><img src="./asset/svg/capsule.svg" alt=""></div>
+          </a>
         </div>
 
+  </nav>
+  <header>
+    <div class="d-flex justify-content-end align-content-center">
+      <h1>!Bienvenidos a mi Tienda!</h1>
+    </div>
+  </header>
+  <main class="container">
 
 
-        <input type="checkbox" id="burger-toggle">
-        <label for="burger-toggle" class="burger-menu">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </label>
-        <div class="menu">
-          <div class="menu-inner">
-            <ul class="menu-nav">
-              <li class="menu-nav-item"><a class="menu-nav-link" href="./index.html"><span>
-                    <div>Inicio</div>
-                  </span></a></li>
-              <li class="menu-nav-item"><a class="menu-nav-link" href="./contacts.html"><span>
-                    <div>Contactos</div>
-                  </span></a></li>
-              <li class="menu-nav-item"><a class="menu-nav-link" href="./juguetes.html"><span>
-                    <div>Juguetes</div>
-                  </span></a></li>
-              <li class="menu-nav-item"><a class="menu-nav-link" href="./Remedios.html"><span>
-                    <div>Remedios</div>
-                  </span></a></li>
-            </ul>
-    
-    
-            <div class="images">
-              <a class="image-link" href="#">
-                <div class="image"><img src="./asset/svg/house-heart-fill.svg" alt=""></div>
-              </a>
-              <a class="image-link" href="#">
-                <div class="image"><img src="./asset/svg/person-lines-fill.svg" alt=""></div>
-              </a>
-              <a class="image-link" href="#">
-                <div class="image"><img src="./asset/svg/dribbble.svg" alt=""></div>
-              </a>
-              <a class="image-link" href="#">
-                <div class="image"><img src="./asset/svg/capsule.svg" alt=""></div>
-              </a>
-            </div>
-    
-      </nav>
-    <header>
-        <div class="d-flex justify-content-end align-content-center">
-            <h1>!Bienvenidos a mi Tienda!</h1>
-        </div>
-    </header>
-    <main class="container">
-    
-        
-        <!-- REMEDIOS -->
+    <!-- REMEDIOS -->
     <div id="remediosContainer" class="d-flex flex-wrap justify-content-center">
 
 
-        </div>
+    </div>
 
-    </main>
-
-
-<footer>
-    <footer>
-        <article class="newsletter">
-            <div class="textNewsletter">
-                <p class="fw-semibold fs-5">Suscríbite para más novedades</p>
-            </div>
-            <div class="inputNewsletter">
-                <input type="search" placeholder="Ingresa tu mail">
-                <button>Suscribirse</button>
-            </div>
-        </article>
-        <article class="info gap-2">
-            <img src="./asset/img/logo2.png" alt="" class="logoFooter">
-            <div>
-                <p class="fw-semibold fs-5">La mejor atención para tu caniche</p>
-            </div>
-            <div class="direccion">
-                <p class="fw-semibold fs-5">Rio de Janeiro 300</p>
-                <p class="fw-semibold fs-5">Caballito, Buenos Aires</p>
-            </div>
-            <div class="contactosInfo">
-                <a href="tel:+54351153 71831" class="fw-semibold"><span class="bold">Tel:</span> +54 351 153 271 831</a>
-                <a href="mailto:info@mindypetshop.com" class="fw-semibold"><span class="bold">Email:</span>info@mindypetshop.com</a>
-            </div>
-            <div class="redesSociales">
-                <div class="d-flex justify-content-center align-items-center rounded-circle shadow p-3 mb-2 rounded"><a href="#"><img src="./asset/svg/twitter.svg" alt=""></a></div>
-                <div class="d-flex justify-content-center align-items-center rounded-circle shadow p-3 mb-2 rounded"><a href="#"><img src="./asset/svg/instagram.svg" alt=""></a></div>
-                <div class="d-flex justify-content-center align-items-center rounded-circle shadow p-3 mb-2 rounded"><a href="#"><img src="./asset/svg/facebook.svg" alt=""></a></div>
-                <div class="d-flex justify-content-center align-items-center rounded-circle shadow p-3 mb-2 rounded"><a href="#"><img src="./asset/svg/linkedin.svg" alt=""></a></div>
-            </div>
-        </article>
-        <article class="derechos">
-            <p class="ultimoTexto">© Todos los derechos reservados <span class="bold">Equipo 1</span></p>
-        </article>
-    </footer>
-</footer>
+  </main>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-        <script src="./js/remedios.js"></script>
+  <footer>
+
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="./js/remedios.js"></script>
 </body>
 
 </html>
