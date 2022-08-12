@@ -621,3 +621,10 @@ button:active .icon svg {
 .footer-logo{
     width: 40vh;
 }
+.finalizarcompra{
+    color: #1a1e23;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    background-color: #7caa69;
+}
