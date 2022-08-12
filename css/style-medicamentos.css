@@ -695,3 +695,10 @@ svg {
   }
     
   }
+
+  .searchbartienda{
+    margin-top: 20px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color:#f0a93e32;
+  }

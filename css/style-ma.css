@@ -83,6 +83,7 @@ header {
 /*-------Tabla---------*/
 /*----------------*/
 th , td{
+  font-size: small;
   text-align: center;
 }
 #footer {
@@ -217,7 +218,7 @@ th , td{
   }
 }
 main{
-  height: 80vh;
+  min-height: 100vh;
 }
 .footer-logo{
   width: 40vh;
@@ -233,9 +234,6 @@ main{
   #footer .footer-top .footer-links {
       margin-left: 0px;
       margin-bottom: 30px;
-  }
-  #tablepr{
-    
   }
 }
 
