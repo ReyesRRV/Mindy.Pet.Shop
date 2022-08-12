@@ -4,8 +4,9 @@ const datosApi = async() => {
         res = await API
         arrayApi = await res.json()
         juguetes = arrayApi.response.filter(e => e.tipo == "Juguete")
-        console.log(juguetes)
         cardGenerator(juguetes)
+        search.addEventListener('keyup', buscar)
+
         let botonComprar = document.querySelectorAll("button");
         botonComprar.forEach((boton) => boton.addEventListener("click", pushCarrito))
         cargarCarrito()
@@ -16,7 +17,7 @@ const datosApi = async() => {
 }
 datosApi()
 
-//CARDS
+//CARTAS
 let cardsCont = document.getElementById("cont_juguetes")
 function cardGenerator(array){
    cardsCont.innerHTML = ''
@@ -77,10 +78,24 @@ function cargarCarrito() {
   if (localStorage.getItem("id") !== null) {
     // Carga la información
     arrayCarrito = JSON.parse(localStorage.getItem("id"));
-    console.log(arrayCarrito);
   }
 }
 function carritoNumero() {
   document.getElementById("botoncarrito").innerText = arrayCarrito.length
-  console.log(arrayCarrito.length)
+}
+
+//BUSCADOR
+let inputBox = document.getElementById('buscador')
+let search = document.getElementById('btn')
+function searchText(text, arrayD){
+  console.log(text)
+  console.log(arrayD)
+    let arrayFiltrado = arrayD.filter(e =>e.nombre.toLowerCase().includes(text.trim().toLowerCase()))
+}
+
+function buscar(array){
+  text = ""
+  if(array.nombre.toLowerCase().includes(text.trim().toLowerCase())){
+
+  }
 }
