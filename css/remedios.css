@@ -19,7 +19,7 @@ header{
     background-image:url(https://media.discordapp.net/attachments/993508372357853215/1006674005249490984/bowl-and-pet-daities-on-green-background_1_2.png?width=1440&height=575);
     background-position: 10%;
     background-size:cover;
-    height: 100vh;
+    height: 30vh;
 }
 main{
     display: flex;
@@ -691,3 +691,11 @@ p {
     margin-top: 8px;
     margin-bottom: 8px;
 }
+
+
+/* @media(min-width: 990px) {
+  #footer .footer-top .footer-links{
+    margin-left: 15rem !important;
+  }
+    
+  } */
