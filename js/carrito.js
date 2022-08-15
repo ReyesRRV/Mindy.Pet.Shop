@@ -37,7 +37,7 @@ function addItemToCart(arrayCarrito) {
                         class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
                         <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
                             value="1">
-                        <button class="btn btn-danger buttonDelete" type="button">X</button>
+                        <button class="btn btn-danger buttonDelete" data-id="${product._id}" type="button">X</button>
                     </div>
                 </div>
             </div>
@@ -87,6 +87,11 @@ function removeShoppingCartItem(event) {
     //el elemento mas cercano del boton clickeado con la clase shoppingCartItem de la linea 23, se elimina:
     buttonClicked.closest(".shoppingCartItem").remove();
     //incluyo la funcion para actualizar el monto total si se elimina un producto:
+    
+    let articleId = buttonClicked.getAttribute("data-id");
+    let storageItem = arrayCarrito;
+    let newStorage = JSON.stringify(storageItem.filter(item => item._id !== articleId));
+    localStorage.setItem("id",newStorage)
     updateShoppingCartTotal();
 }
 
